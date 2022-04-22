@@ -1,0 +1,4 @@
+CRITICAL - 2022-03-29 09:05:23 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 D:\latihan_php_Dimas\ci4\vendor\codeigniter4\framework\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 D:\latihan_php_Dimas\ci4\spark(45): require('D:\\latihan_php_...')
+#2 {main}

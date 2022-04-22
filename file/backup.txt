@@ -1,0 +1,83 @@
+/* membuat data base dan table nya
+
+CREATE DATABASE db_dimas; 
+CREATE TABLE peserta_didik( NIS CHAR (12) PRIMARY KEY, Nama VARCHAR(50), Gender ENUM('L','p'), Tempat_Lahir VARCHAR(50), Tgl_Lahir DATE ); 
+CREATE TABLE kelas( kode_kelas CHAR (5) PRIMARY KEY, nama_kelas VARCHAR(10) );
+CREATE TABLE jurusan( kode_jurusan CHAR (5) PRIMARY KEY, nama_jurusan VARCHAR(15) );
+
+
+
+
+/* menambahkan isi di table 
+
+INSERT INTO jurusan (kode_jurusan,nama_jurusan) VALUES 
+('001','REKAYASA PERANGKAT LUNAK'),
+('002','TEKNIK KOMPUTER DAN JARINGAN'),
+('003','AKUNTANSI DAN KEUANGAN LEMBAGA'),
+('004','TEKNIK KENDARAAN RINGAN OTOMOTIF'),
+('005','PERHOTELAN'),
+('006','OTOMASASI DAN TATA KELOLA PERKANTORAN');
+
+
+/* menambahkan isi di table 
+
+INSERT INTO kelas (kode_kelas,nama_kelas) VALUES 
+('011','RPL'),
+('022','TKJ'),
+('033','AKL'),
+('044','TKRO'),
+('055','HTL'),
+('066','OTKP');
+
+
+/* menambahkan isi di table 
+
+INSERT INTO kelas (kode_kelas,nama_kelas) VALUES 
+('111','XI RPL'),
+('122','XI TKJ'),
+('133','XI AKL'),
+('144','XI TKRO 1'),
+('155','XI TKRO 2'),
+('166','XI HTL 1'),
+('177','XI HTL 2'),
+('188','XI OTKP 1'),
+('199','XI OTKP 2');
+SELECT * FROM kelas;
+
+
+/* menambahkan isi di table 
+
+INSERT INTO peserta_didik() VALUES 
+('101010','ACHMAD FERDIAN K','L','SUBANG','2004-01-15','001','011'),
+('111111','ADITIYA H','L','SUBANG','2003-03-08','001','011'),
+('131313','ADITIYA D','L','SUBANG','2003-07-09','001','011'),
+('141414','ADLIYANA','L','SUBANG','2003-03-08','001','011'),
+('151515','AKHDAN ','L','SUBANG','2003-08-09','001','011'),
+('161616','ALDA','P','SUBANG','2003-03-07','001','011'),
+('171717','CIKA','L','SUBANG','2003-02-08','001','011'),
+('181818','DELA','P','SUBANG','2003-03-08','001','011'),
+('191919','DIMAS TRIANA','L','SUBANG','2003-08-05','001','011'),
+('202020','ENDANG','L','SUBANG','2003-03-08','001','011'),
+('212121','FAJAR A','L','BANDUNG','2003-07-022','001','011'),
+('222222','FIKO R','L','BANDUNG','2003-03-08','001','011'),
+('232323','GILANG','L','SUBANG','2003-03-08','001','011'),
+('242424','KRESNA','L','SUBANG','2003-06-08','001','011'),
+('252525','MILA','P','SUBANG','2003-08-08','001','011');
+SELECT * FROM peserta_didik;
+
+/* merubah isi table 
+
+UPDATE kelas SET nama_kelas='XII OTKP 2' WHERE kode_kelas='099';
+;
+
+
+INSERT INTO siswa (nisn,nis,nama,id_kelas,alamat,no_telp,id_spp) VALUES 
+('545454','78956','jumi','1','kp del luna','08976541',''),
+('534534', '27187','ikom','1','kp.itaewon','08382789'),
+('172767','81298','renebae','1','kp.kwangya','08218287'),
+('289172','91928','chongah','1','kp.ygnation','08329328'),
+('238736','23898','tehyung','1','kp.bangtan','0839829'),
+('290298','12910','lilis','2','kp.ygnation','08273612'),
+('238973','32497','jichu','3','kp.ygnation','08238972'),
+('238732','89387','dubu','2','kp.jewaipih','083238734'),
+('14324','219387','chaeng','3','kp.jewaipih','082387823');

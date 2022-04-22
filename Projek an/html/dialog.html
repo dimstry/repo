@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>dialog JS</title>
+</head>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<body>
+    <button onclick="dialog1()" class="btn btn-primary">Dialog 1</button>
+    <button onclick="dialog2()" class="btn btn-success">Dialog 2</button>
+    <button onclick="dialog3()" class="btn btn-danger">Dialog 3</button>
+    <button onclick="dialog4()" class="btn btn-info">Dialog 4</button>
+    <button onclick="dialog5()" class="btn btn-light">Dialog 5</button>
+    <button onclick="dialog6()" class="btn btn-warning">Dialog 6</button>
+    <button onclick="dialog7()" class="btn btn-dark">Dialog 7</button>
+    <button onclick="dialog8()" class="btn btn-info">Dialog 8</button>
+    <button onclick="dialog9()" class="btn btn-info">Dialog 9</button>
+    <button onclick="dialog10()" class="btn btn-info">Dialog 10</button>
+    <button onclick="dialog11()" class="btn btn-info">Dialog 11</button>
+    <button onclick="dialog12()" class="btn btn-info">Dialog 12</button>
+    <button onclick="dialog13()" class="btn btn-info">Dialog 13</button>
+    <button onclick="dialog14()" class="btn btn-info">Dialog 14</button>
+    <div class="container mt-1"></div>
+    <button onclick="dialog15()" class="btn btn-info">Dialog 15</button>
+    <button onclick="dialog16()" class="btn btn-info">Dialog 16</button>
+
+    <script src="sweetalert2@11.js"></script>
+    <script>
+        function dialog1() {
+            Swal.fire('Hallo Word')
+        }
+
+        function dialog2() {
+            Swal.fire(
+            'The Internet?',
+            'That thing is still around?',
+            'question'
+            )
+        }
+
+          function dialog3() {
+            Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: '<a href="">Why do I have this issue?</a>'
+        })
+        }
+
+         function dialog4() {
+            Swal.fire({
+            imageUrl: 'https://placeholder.pics/svg/300x1500',
+            imageHeight: 1500,
+            imageAlt: 'A tall image'
+            })
+        }
+
+        function dialog5() {
+            Swal.fire({
+            title: '<strong>HTML <u>example</u></strong>',
+            icon: 'info',
+            html:
+            'You can use <b>bold text</b>, ' +
+            '<a href="//sweetalert2.github.io">links</a> ' +
+            'and other HTML tags',
+            showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> Great!',
+            confirmButtonAriaLabel: 'Thumbs up, great!',
+            cancelButtonText:
+            '<i class="fa fa-thumbs-down"></i>',
+            cancelButtonAriaLabel: 'Thumbs down'
+            })
+        }
+
+        function dialog6() {
+
+            Swal.fire({
+              title: 'Do you want to save the changes?',
+              showDenyButton: true,
+              showCancelButton: true,
+              confirmButtonText: 'Save',
+              denyButtonText: `Don't save`,
+            }).then((result) => {
+              /* Read more about isConfirmed, isDenied below */
+              if (result.isConfirmed) {
+                Swal.fire('Saved!', '', 'success')
+              } else if (result.isDenied) {
+                Swal.fire('Changes are not saved', '', 'info')
+              }
+            })
+        }
+
+        function dialog7() {
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Your work has been saved',
+              showConfirmButton: false,
+              timer: 1500
+            })
+
+        }
+
+        function dialog8() {
+            Swal.fire({
+              title: 'Custom animation with Animate.css',
+              showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+              },
+              hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+              }
+            })
+        }
+
+        function dialog9() {
+            Swal.fire({
+              title: 'Are you sure?',
+              text: "You won't be able to revert this!",
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire(
+                  'Deleted!',
+                  'Your file has been deleted.',
+                  'success'
+                )
+              }
+            })
+
+        }
+
+        function dialog10() {
+            const swalWithBootstrapButtons = Swal.mixin({
+              customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+              },
+              buttonsStyling: false
+            })
+
+            swalWithBootstrapButtons.fire({
+              title: 'Are you sure?',
+              text: "You won't be able to revert this!",
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonText: 'Yes, delete it!',
+              cancelButtonText: 'No, cancel!',
+              reverseButtons: true
+            }).then((result) => {
+              if (result.isConfirmed) {
+                swalWithBootstrapButtons.fire(
+                  'Deleted!',
+                  'Your file has been deleted.',
+                  'success'
+                )
+              } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+              ) {
+                swalWithBootstrapButtons.fire(
+                  'Cancelled',
+                  'Your imaginary file is safe :)',
+                  'error'
+                )
+              }
+            })
+        }
+
+        function dialog11() {
+            Swal.fire({
+              title: 'pemandangan',
+              text: 'Modal with a custom image.',
+              imageUrl: 'https://asset-a.grid.id/crop/0x0:0x0/x/photo/2021/07/13/gambar-ilustrasi-bisa-memperjela-20210713123218.jpg',
+              imageWidth: 400,
+              imageHeight: 200,
+              imageAlt: 'Custom image',
+            })
+        }
+
+        function dialog12() {
+             
+            Swal.fire({
+              title: 'Custom width, padding, background.',
+              width: 600,
+              padding: '3em',
+              background: '#fff url(/images/trees.png)',
+              backdrop: `
+                rgba(0,0,123,0.4)
+                url("/images/nyan-cat.gif")
+                left top
+                no-repeat
+              `
+            })
+        }
+
+        function dialog13() {
+            let timerInterval
+            Swal.fire({
+              title: 'Auto close alert!',
+              html: 'I will close in <b></b> milliseconds.',
+              timer: 2000,
+              timerProgressBar: true,
+              didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                  b.textContent = Swal.getTimerLeft()
+                }, 100)
+              },
+              willClose: () => {
+                clearInterval(timerInterval)
+              }
+            }).then((result) => {
+              /* Read more about handling dismissals below */
+              if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('I was closed by the timer')
+              }
+            })
+        }
+
+        function dialog14() {
+            Swal.fire({
+              title: 'هل تريد الاستمرار؟',
+              icon: 'question',
+              iconHtml: '؟',
+              confirmButtonText: 'نعم',
+              cancelButtonText: 'لا',
+              showCancelButton: true,
+              showCloseButton: true
+            })
+        }
+
+        function dialog15() {
+            Swal.fire({
+              title: 'Submit your Github username',
+              input: 'text',
+              inputAttributes: {
+                autocapitalize: 'off'
+              },
+              showCancelButton: true,
+              confirmButtonText: 'Look up',
+              showLoaderOnConfirm: true,
+              preConfirm: (login) => {
+                return fetch(`//api.github.com/users/${login}`)
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error(response.statusText)
+                    }
+                    return response.json()
+                  })
+                  .catch(error => {
+                    Swal.showValidationMessage(
+                      `Request failed: ${error}`
+                    )
+                  })
+              },
+              allowOutsideClick: () => !Swal.isLoading()
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire({
+                  title: `${result.value.login}'s avatar`,
+                  imageUrl: result.value.avatar_url
+                })
+              }
+            })
+        }
+
+        function dialog16() {
+            Swal.fire({
+              icon: 'success',
+              title: 'Your work has been saved',
+              showConfirmButton: false,
+              timer: 1500
+            })
+        }
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

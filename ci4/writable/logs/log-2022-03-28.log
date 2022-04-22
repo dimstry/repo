@@ -1,0 +1,12 @@
+CRITICAL - 2022-03-28 05:50:13 --> Invalid file: auth/template/index.php
+#0 /storage/emulated/0/ci4/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/template/i...')
+#1 /storage/emulated/0/ci4/vendor/codeigniter4/framework/system/View/View.php(226): CodeIgniter\View\View->render('auth/template/i...', Array, true)
+#2 /storage/emulated/0/ci4/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('auth/login', Array, true)
+#3 /storage/emulated/0/ci4/app/Controllers/Home.php(9): view('auth/login')
+#4 /storage/emulated/0/ci4/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#5 /storage/emulated/0/ci4/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 /storage/emulated/0/ci4/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /storage/emulated/0/ci4/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /storage/emulated/0/ci4/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/storage/emulat...')
+#9 {main}
+ERROR - 2022-03-28 07:02:25 --> Error connecting to the database: Unknown database 'ci4'

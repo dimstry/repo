@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DataTable</title>
+	
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/DataTables.bootstrap4.css">
+</head>
+<body>
+	<div class="container">
+	<table class="table-dark table striped">
+	  	<thead>
+	    <tr>
+	      <th scope="row">#</th>
+	      <th scope="col">Nama</th>
+	      <th scope="col">No HP</th>
+	      <th scope="col">Email</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <th scope="row">1</th>
+	      <td>Dimas Triana</td>
+	      <td>08988224023</td>
+	      <td>dimasttriana03@gmail.com</td>
+	    </tr>
+	     <tr>
+	      <th scope="row">2</th>
+	      <td>Gilang</td>
+	      <td>01234543636</td>
+	      <td>gilangtidur@gmail.com</td>
+	    </tr>
+	     <tr>
+	      <th scope="row">3</th>
+	      <td>Ferdian</td>
+	      <td>1233445566</td>
+	      <td>FerdiAAn@gmail.com</td>
+	    </tr>
+	     <tr>
+	      <th scope="row">4</th>
+	      <td>Fiko</td>
+	      <td>77777777777</td>
+	      <td>Badut03@gmail.com</td>
+	    </tr>
+	     <tr>
+	      <th scope="row">5</th>
+	      <td>Endang</td>
+	      <td>032142423</td>
+	      <td>endangggggggg@gmail.com</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">6</th>
+	      <td>Fajar</td>
+	      <td>085215369632</td>
+	      <td>fajarandriana@gmail.com</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">7</th>
+	      <td>Kresna</td>
+	      <td>000222333</td>
+	      <td>ucup@gmail.com</td>
+	    </tr>
+	  </tbody>
+	</table>
+	</div>
+
+	<script src="js/jquery-3.5.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.DataTables.js"></script>
+	<script src="js/dataTables.bootstrap4.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('.table').DataTable({
+				"language":{
+					"search": "Cari",
+					"lengthmenu": "Tampilan_MENU_data",
+					"zeroRecords": "Tidak ditemukan data yang sesuai"
+				}
+			});
+		});
+	</script>
+</body>
+</html>

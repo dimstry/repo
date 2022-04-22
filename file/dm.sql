@@ -1,0 +1,1 @@
+`db_dimas`SELECT * FROM jurusan WHERE kode_jurusan='001';

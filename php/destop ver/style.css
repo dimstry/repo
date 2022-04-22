@@ -1,0 +1,99 @@
+
+*{
+  scroll-behavior: smooth;
+}
+.navbar{ 
+  position:relative ;
+  transition:clip-path .3s;
+}
+/*    Text   */
+
+
+
+.navbar:{
+  transition-duration:1s;
+}
+
+.navbar-brand {
+  font-family: Viga ;
+  font-size:20px;
+}
+
+.jumbotron{
+  background-image:url(img/jumbotron-bg.jpg) ;
+  background-size:cover;
+  height: 500px;
+  text-align:center ;
+}
+.jumbotron .display-5{
+  font-family:Viga;
+  color:white;
+  margin-top:10px;
+}
+
+/*            Progress          */
+
+
+.progress {
+  border-radius: 10px;
+}
+
+.progress .progress-bar {
+  width: 0px;
+  border-radius: 10px;
+  transition:animate-positive 2s;
+}
+@-webkit-keyframes animate-positive {
+  0% {
+    width:0;
+  }
+}
+@keyframes animate-positive {
+  0% {
+    width:0;
+  }
+}
+
+
+
+.lead {
+  color:white;
+  margin-bottom:10px;
+}
+
+.About {
+  margin-top:50px;
+  margin-bottom:20px;
+}
+
+.content-container{
+  margin-bottom:100px;
+  margin-top:5px;
+  
+}
+
+/* desk ver */
+@media screen(min-width: 922px){
+  *{
+    scroll-behavior: smooth;
+  }
+
+  .jumbotron {
+    margin-top: -80px;
+  }
+  .lead {
+    color:white;
+    margin-bottom:10px;
+  }
+
+  .About {
+    margin-top:50px;
+    margin-bottom:20px;
+  }
+
+  .content-container{
+    margin-bottom:100px;
+    margin-top:5px;
+    
+  }
+}
