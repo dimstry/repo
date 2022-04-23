@@ -81,3 +81,14 @@ INSERT INTO siswa (nisn,nis,nama,id_kelas,alamat,no_telp,id_spp) VALUES
 ('238973','32497','jichu','3','kp.ygnation','08238972'),
 ('238732','89387','dubu','2','kp.jewaipih','083238734'),
 ('14324','219387','chaeng','3','kp.jewaipih','082387823');
+
+
+
+/* membuat view
+
+SELECT 
+Apa yg di butuh kan 
+FROM
+WHRE
+pasaja yg di butuhkan di view
+
